@@ -1,0 +1,25 @@
+How to run:
+
+1. cd into project folder
+2. type in the terminal "node tunnel.js" to run tunnel.js sccript from node
+3. put in credentials to connect to mysql database
+4. once connected via tunnel.js, type in split terminal "node server.js" to run ther server script on node
+5. go to "localhost:4139" on your computer to access main page of the website
+
+Features implemented:
+
+- ability to view posts in reverse-temporal order (with pagination)
+- ability to view posts in order of most likes (with pagination)
+- ability to create new posts associated with a user account
+- ability to like posts, with a maintained like-count on the post
+- ability to delete posts only created by the current user account
+- ability to edit a post only created by the current user account
+- ability to log in and log out in order to create a new post and view account
+- ability to create a new account
+
+Notes:
+- best viewed on a fullscreen chrome tab
+- database info:
+    - user: "C4131F23U45",
+    - database: "C4131F23U45",
+    - password: "2075",

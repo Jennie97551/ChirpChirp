@@ -1,0 +1,36 @@
+extends templatefile.pug
+
+block title 
+    title New Chirp
+
+block stylesheet 
+    style(type="text/css").
+        @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik+Mono+One&display=swap');
+        form {
+            background-color: rgb(249, 222, 86);
+            border-radius: 25px;
+            width: 70vw;
+            padding: 15px;
+            margin: auto;
+            margin-top: 70px;
+            color: white;
+            font-family: 'Lilita One', sans-serif;
+            font-family: 'Rubik Mono One', monospace;
+        }
+
+block content 
+    div(class="content")
+        div(class="header")
+            h1 Post a New Chirp
+        div(class="text")
+            form(action="/postform" method="post")
+                p 
+                    label(for="text") What Would You Like to Chirp?
+                    br
+                    br
+                    textarea(id="text" name="text" placeholder="Chirp Chirp Bois" rows="20" cols="100" maxlength="280" required)
+                p 
+                    span
+                        p Maximum Chirp Length: 280
+                    span
+                        input(type="submit" id="submit" name="submit")

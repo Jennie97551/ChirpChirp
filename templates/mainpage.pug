@@ -1,0 +1,91 @@
+extends templatefile.pug 
+
+block stylesheet
+    style(type="text/css").
+        @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik+Mono+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito&family=Poppins&family=Rubik+Mono+One&display=swap');
+        .text{
+            display: flex;
+            align-content: space-between;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+        .post{
+            background-color: rgb(249, 222, 86);
+            border-radius: 25px;
+            padding: 10px;
+            flex-grow: 1;
+            margin: 15px;
+        }
+        .post:hover{
+            box-shadow: 10px 5px 5px rgb(250, 199, 45);
+        }
+        footer {
+            position: absolute;
+            display: flex;
+            justify-content: space-evenly;
+            bottom: 0;
+            width: 100%;
+            height: 2.5rem;
+        }
+        .username, .numLikes{
+            font-family: 'Nunito', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            margin: 10px;
+            color: rgb(107, 189, 34);
+        }
+        .text{
+            font-family: 'Nunito', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            margin: 20px;
+        }
+        .buttons{
+            float: right;
+        }
+        a{
+            text-decoration: none;
+        }
+
+block title
+    title Chirp Chirp 
+
+block scripts 
+    script(src="/js/mainpage.js")
+
+block content
+    div(class="content")
+        div(class="header")
+            h1 Chirp Chirp
+        div(class="text")
+            each post in posts
+                div(class="post")
+                    span(hidden)= post.id 
+                    span(class="username")= post.user
+                    if post.edit
+                        span(class="buttons")
+                            button(type="button" class="edit") Edit
+                            button(type="button" class="delete") Delete
+                    else 
+                        span(hidden) uwu
+                    div(class="text")= post.text 
+                    button(type="button" class="like") Like
+                    span(class="numLikes")= post.likes
+        footer
+            if page
+                if page>=2
+                    if mostliked 
+                        a(class="decor" href="/main-likes?page="+(page-1)) Previous Page 
+                    else 
+                        a(class="decor" href="/main?page="+(page-1)) Previous Page
+                else 
+                    if mostliked 
+                        a(class="decor" href="/main") Newest 
+                    else 
+                        a(class="decor" href="/main-likes") Most Liked 
+                p= "Page " + page
+                if mostliked 
+                        a(class="decor" href="/main-likes?page="+(page+1)) Next Page 
+                else 
+                    a(class="decor" href="/main?page="+(page+1)) Next Page 
+

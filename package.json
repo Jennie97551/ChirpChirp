@@ -1,0 +1,20 @@
+{
+  "name": "4131project",
+  "version": "1.0.0",
+  "description": "4131 final project assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jennie Cheng",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql-await": "^2.2.3",
+    "prompt": "^1.3.0",
+    "pug": "^3.0.2",
+    "tunnel-ssh": "^5.1.1"
+  }
+}

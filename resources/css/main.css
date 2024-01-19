@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik+Mono+One&display=swap');
+
+body{
+    background-color: white;
+    color: rgb(250, 199, 45);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    height: 12vh;
+    width: 100vw;
+    background-color: rgb(107, 189, 34);
+    text-align: center;
+}
+
+
+nav a{
+    color: rgb(249, 222, 86);
+    text-decoration: none;
+    font-family: 'Lilita One', sans-serif;
+    font-family: 'Rubik Mono One', monospace;
+}
+
+nav ul{
+    background-color: rgb(213, 250, 135);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+nav ul li{
+    background-color: white;
+    border-radius: 25px;
+    padding: 20px;
+    
+}
+
+nav ul li:hover{
+    background-color: rgb(107, 189, 34);
+    box-shadow: 10px 5px 5px rgb(49, 166, 26);
+}
+
+h1, h2{
+    font-family: 'Lilita One', sans-serif;
+    font-family: 'Rubik Mono One', monospace;
+    text-align: center;
+}
+
+button, input[type="submit"], a[class="decor"]{
+    background-color: rgb(107, 189, 34);
+    padding: 10px;
+    border-radius: 25px;
+    /* margin: 10px; */
+    font-family: 'Lilita One', sans-serif;
+    font-family: 'Rubik Mono One', monospace;
+    color: white;
+}
+
+button:hover, input[type="submit"]:hover, a[class="decor"]:hover{
+    background-color: rgb(213, 250, 135);
+    color: rgb(107, 189, 34);
+}
+
+footer{
+    font-family: 'Lilita One', sans-serif;
+    font-family: 'Rubik Mono One', monospace;
+}
